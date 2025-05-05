@@ -7,7 +7,7 @@ jobs:
     runs-on: Ubuntu-latest # more options can be seen from https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
     steps:
       - name: <name of the step>
-        run: echo "Hello world!" or action/checkout@v2 #a command like "echo hello world" or a script or a github action
+        run: echo "Hello world!" #or uses: action/checkout@v2 # any of the 2 can be used either a command using run: keyword or an action using uses: keyword
       
       - name:  <name of the step> #another step if needed, a job can have multiple steps
         run:  | #the commands can be written in multiple lines using "|"
