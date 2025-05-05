@@ -1,0 +1,20 @@
+name: demo workflow #name of the workflow
+
+on: workflow_dispatch #[workflow_dispatch, push, pull_request] # Specifies the events that trigger the workflow
+
+jobs:
+  first-job: #name of the job
+    runs-on: Ubuntu-latest # more options can be seen from https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
+    steps:
+      - name: <name of the step>
+        run: echo "Hello world!" or action/checkout@v2 #a command like "echo hello world" or a script or a github action
+      
+      - name:  <name of the step> #another step if needed, a job can have multiple steps
+        run:  | #the commands can be written in multiple lines using "|"
+            echo "Hello" 
+            echo "World!"  
+  second-job: #name of the other job, a workflow can have multiple jobs
+    runs-on: windows-latest
+    steps:
+      - name: <name of the step>
+        run: echo "i am second step"
