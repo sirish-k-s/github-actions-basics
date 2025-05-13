@@ -11,8 +11,8 @@ jobs:
       
       - name:  <name of the step> #another step if needed, a job can have multiple steps
         run:  | #the commands can be written in multiple lines using "|"
-            echo "Hello" 
-            echo "World!"  
+            echo "Hello World! " 
+            echo "Using a multi-line command"
   second-job: #name of the other job, a workflow can have multiple jobs
     runs-on: windows-latest
     steps:
